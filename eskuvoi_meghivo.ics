@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Blanka es Dani//Wedding//HU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+BEGIN:VEVENT
+UID:20260613T150000-templomi@blankaesdani.love
+DTSTAMP:20250125T120000Z
+DTSTART:20260613T150000
+DTEND:20260613T160000
+SUMMARY:Templomi esküvő - Blanka és Dani
+LOCATION:Abaliget, Magyarország
+DESCRIPTION:Templomi szertartás Blanka és Dani esküvőjén.
+END:VEVENT
+
+BEGIN:VEVENT
+UID:20260613T173000-polgari@blankaesdani.love
+DTSTAMP:20250125T120000Z
+DTSTART:20260613T173000
+DTEND:20260614T040000
+SUMMARY:Polgári szertartás és lagzi - Blanka és Dani
+LOCATION:Rácz tanya, Orfű, Magyarország
+DESCRIPTION:Polgári szertartás és lagzi Blanka és Dani esküvőjén.
+END:VEVENT
+
+END:VCALENDAR
