@@ -116,7 +116,7 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Mikor?</h3>
-							<p>tba</p>
+							<p>2026.06.13. szombat </p>
 						</div>
 					</div>
 
@@ -126,7 +126,7 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Hol?</h3>
-							<p>tba</p>
+							<p>Orfű, Rácz tanya</p>
 						</div>
 					</div>
 
@@ -136,7 +136,7 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Minek örülünk ajándékba?</h3>
-							<p>tba</p>
+							<p>Számunkra a legfontosabb, hogy velünk ünnepeljetek. Ha ajándékkal készülnétek, a közös életünk elindításához borítékban átnyújtott támogatásotoknak örülnénk a legjobban </p>
 						</div>
 					</div>
 
@@ -146,7 +146,10 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Visszajelzés?</h3>
-							<p>tba</p>
+							<p>Az alábbi <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVmuyuakT_lG3IRDt5qaKfdEoJhu4gK_-3M27a81drociiig/viewform"
+   								target="_blank" rel="noopener">
+  								google űrlapon
+							</a> tudtok visszajelezni!</p>
 						</div>
 					</div>
 
@@ -156,7 +159,7 @@
 						</span>
 						<div class="feature-copy">
 							<h3>Szállás?</h3>
-							<p>tba</p>
+							<p>A szállásról alapvetően magatoknak kell gondolkodnotok. A helyszín alkalmas körülbelül 100 fő elszállásolására. A visszajelző formban tudjátok jelezni ha szeretnétek helyszíni elszállásolással élni.</p>
 						</div>
 					</div>
 
@@ -172,6 +175,46 @@
 		</div>
 	</div>
 
+<div class="row animate-box">
+  <div class="col-md-8 col-md-offset-2">
+
+    <div class="faq-title">Gyakori kérdések</div>
+
+    <div class="wedding-faq" id="wedding-faq">
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          Mikor és hol lesz az esküvő?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          2026. június 13-án. Templomi szertartás Abaligeten, a lagzi Orfűn, a Rácz tanyán.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          Milyen öltözet ajánlott?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          Ünnepi, de kényelmes. A helyszín miatt váltócipő / lapos cipő ajánlott.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          Hogyan tudok visszajelezni?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" hidden>
+          A Google űrlapon tudsz visszajelezni (részvétel, allergia, szállásigény).
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 		<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="credits">
@@ -212,7 +255,131 @@
 
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	
 	</body>
 </html>
+
+<style>
+  .wedding-faq{
+    margin-top: 10px;
+  }
+  .wedding-faq .faq-item{
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    padding: 12px 0;
+  }
+
+  /* Ha a szekció szürke háttéren van, ez is jól mutat:
+     border-bottom: 1px solid rgba(0,0,0,0.08); */
+
+  .wedding-faq .faq-q{
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .wedding-faq .faq-q:hover{
+    opacity: 0.9;
+  }
+
+  .wedding-faq .faq-icon{
+    font-size: 20px;
+    line-height: 1;
+    transform: translateY(-1px);
+    opacity: 0.8;
+    transition: transform 180ms ease;
+  }
+
+  .wedding-faq .faq-item.is-open .faq-icon{
+    transform: rotate(45deg);
+  }
+
+  .wedding-faq .faq-a{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.95;
+  }
+  .faq-title{
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.faq-title::after{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: currentColor;
+  opacity: 0.35;
+}
+.wedding-rsvp-btn{
+  padding: 18px 48px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 999px; /* pill alak */
+  transition: all 200ms ease;
+}
+
+.wedding-rsvp-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('wedding-faq');
+    if (!root) return;
+
+    var items = root.querySelectorAll('.faq-item');
+
+    items.forEach(function (item) {
+      var btn = item.querySelector('.faq-q');
+      var ans = item.querySelector('.faq-a');
+
+      btn.addEventListener('click', function () {
+        var isOpen = item.classList.contains('is-open');
+
+        // ha azt akarod, hogy egyszerre csak 1 legyen nyitva:
+        items.forEach(function (it) {
+          it.classList.remove('is-open');
+          var b = it.querySelector('.faq-q');
+          var a = it.querySelector('.faq-a');
+          b.setAttribute('aria-expanded', 'false');
+          a.hidden = true;
+        });
+
+        // nyitás/zárás
+        if (!isOpen) {
+          item.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+          ans.hidden = false;
+        }
+      });
+
+      // OPTIONAL: hoverre nyitás (desktopon oké, de mobilon nincs hover)
+      // item.addEventListener('mouseenter', function () {
+      //   btn.click();
+      // });
+    });
+  })();
+</script>
 

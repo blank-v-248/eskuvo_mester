@@ -74,7 +74,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="index.html">Esküvőnk<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="index.html">Üdvözlünk az Esküvői honlapunkon!<strong>.</strong></a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
@@ -97,7 +97,7 @@
 			
 		</div>
 	</nav>
-
+	
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/sajat/P1114368.JPG);" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
@@ -111,6 +111,13 @@
 							<p>
   								<a href="eskuvoi_meghivo.ics" download class="btn btn-default btn-sm">
     							Naptáresemény letöltése!
+  								</a>
+							</p>
+							<p>
+								<h2>Kérjük jelezd, hogy részt tudsz-e venni a nagy napon! </h2>
+  								<a href="https://docs.google.com/forms/d/e/1FAIpQLSdVmuyuakT_lG3IRDt5qaKfdEoJhu4gK_-3M27a81drociiig/viewform?usp=preview"target="_blank" rel="noopener"
+   									class="btn btn-default btn-sm">
+    							Visszajelzek!
   								</a>
 							</p>
 						</div>
@@ -153,7 +160,20 @@
 			</div>
 		</div>
 	</div>
+<section id="silhouette-gif" class="sil-gif">
+  <div class="sil-layer" id="sil-layer-a"></div>
+  <div class="sil-layer" id="sil-layer-b"></div>
+  <div class="overlay"></div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2>Egyre közelebb…</h2>
+        <p>💛</p>
+      </div>
+    </div>
+  </div>
+</section>
 	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/sajat/bg_main.JPG);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -250,7 +270,58 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var a = document.getElementById('sil-layer-a');
+  var b = document.getElementById('sil-layer-b');
+  if (!a || !b) return;
 
+  var frames = [
+    "images/scroll/P1114233.JPG",
+    "images/scroll/P1114234.JPG",
+    "images/scroll/P1114235.JPG",
+    "images/scroll/P1114236.JPG",
+    "images/scroll/P1114237.JPG",
+    "images/scroll/P1114238.JPG",
+    "images/scroll/P1114239.JPG",
+    "images/scroll/P1114240.JPG",
+    "images/scroll/P1114241.JPG",
+    "images/scroll/P1114242.JPG"
+  ];
+
+  // preload
+  frames.forEach(function(src){
+    var img = new Image();
+    img.src = src;
+  });
+
+  var i = 0;
+  var showA = true;
+
+  // kezdőkép
+  a.style.backgroundImage = 'url("' + frames[0] + '")';
+  a.classList.add('is-visible');
+
+  var intervalMs = 900;   // képkocka idő (pl. 900–2000)
+  // az áttűnés ideje a CSS-ben: 900ms
+
+  setInterval(function(){
+    i = (i + 1) % frames.length;
+    var next = frames[i];
+
+    var top = showA ? b : a;
+    var bottom = showA ? a : b;
+
+    top.style.backgroundImage = 'url("' + next + '")';
+    top.classList.add('is-visible');
+    bottom.classList.remove('is-visible');
+
+    showA = !showA;
+  }, intervalMs);
+});
+</script>
+<script>
+</script>
 	<script>
     // Target date: 2026-02-03 16:00
     var target = new Date(2026, 5, 13, 16, 0, 0); 
