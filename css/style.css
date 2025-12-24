@@ -1886,38 +1886,174 @@ form label {
     margin-right: 6px;
     vertical-align: middle;
 }
-/* --- SILHOUETTE "GIF" --- */
-.sil-gif{
-  position: relative;
-  height: 85vh;          /* állítsd: 60–100vh */
-  min-height: 520px;
-  overflow: hidden;
+
+
+
+/* ===== Wedding FAQ (moved from services.html) ===== */
+.wedding-faq{
+    margin-top: 10px;
+  }
+  .wedding-faq .faq-item{
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+    padding: 12px 0;
+  }
+
+  /* Ha a szekció szürke háttéren van, ez is jól mutat:
+     border-bottom: 1px solid rgba(0,0,0,0.08); */
+
+  .wedding-faq .faq-q{
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .wedding-faq .faq-q:hover{
+    opacity: 0.9;
+  }
+
+  .wedding-faq .faq-icon{
+    font-size: 20px;
+    line-height: 1;
+    transform: translateY(-1px);
+    opacity: 0.8;
+    transition: transform 180ms ease;
+  }
+
+  .wedding-faq .faq-item.is-open .faq-icon{
+    transform: rotate(45deg);
+  }
+
+  .wedding-faq .faq-a{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.95;
+  }
+  .faq-title{
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.85;
 }
 
-.sil-gif .sil-layer{
-  position: absolute;
-  inset: 0;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 900ms ease;  /* áttűnés hossza */
-  will-change: opacity;
+.faq-title::after{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: currentColor;
+  opacity: 0.35;
 }
-
-.sil-gif .sil-layer.is-visible{
+/* ===== FAQ SZÖVEG FEKETÉRE ===== */
+.wedding-faq,
+.wedding-faq .faq-q,
+.wedding-faq .faq-a,
+.wedding-faq .faq-icon,
+.faq-title {
+  color: #000;
+}
+.wedding-faq .faq-q:hover {
+  color: #000;
   opacity: 1;
 }
-
-.sil-gif .overlay{
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-  z-index: 2;
+/* ===== GOOGLE FORM LINK – SÁRGA ALAP, FEKETE HOVER ===== */
+p a[href*="docs.google.com"] {
+  color: rgba(194, 166, 53, 0.8);
 }
 
-.sil-gif .container{
+p a[href*="docs.google.com"]:hover,
+p a[href*="docs.google.com"]:focus {
+  color: #ffffff !important;
+}
+
+/* GOOGLE FORM LINK – FINOM ALÁHÚZÁS */
+p a[href*="docs.google.com"] {
   position: relative;
-  z-index: 3;
-  padding-top: 60px;
+  text-decoration: none;
 }
+
+p a[href*="docs.google.com"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+p a[href*="docs.google.com"]:hover::after {
+  transform: scaleX(1);
+}
+/* GOOGLE FORM LINK – FÉLKÖVÉR HOVER */
+p a[href*="docs.google.com"] {
+  font-weight: 400;
+  transition: color 0.25s ease, font-weight 0.25s ease;
+}
+
+p a[href*="docs.google.com"]:hover,
+p a[href*="docs.google.com"]:focus {
+  font-weight: 600;
+  color: #000 !important;
+}
+
+p a[href*="https://www.google.com/maps"] {
+  color: rgba(194, 166, 53, 0.8);
+}
+
+p a[href*="https://www.google.com/maps"]:hover,
+p a[href*="https://www.google.com/maps"]:focus {
+  color: #ffffff !important;
+}
+
+/* GOOGLE TÉRKÉP LINK – FINOM ALÁHÚZÁS */
+p a[href*="https://www.google.com/maps"] {
+  position: relative;
+  text-decoration: none;
+}
+
+p a[href*="https://www.google.com/maps"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+p a[href*="https://www.google.com/maps"]:hover::after {
+  transform: scaleX(1);
+}
+/* GOOGLE Térkép LINK – FÉLKÖVÉR HOVER */
+p a[href*="https://www.google.com/maps"] {
+  font-weight: 400;
+  transition: color 0.25s ease, font-weight 0.25s ease;
+}
+
+p a[href*="https://www.google.com/maps"]:hover,
+p a[href*="https://www.google.com/maps"]:focus {
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+
