@@ -850,14 +850,14 @@ form label {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 30px;
+    font-size: 45px;
   }
 }
 #fh5co-header .display-tc h2,
@@ -2084,9 +2084,22 @@ p a[href*="https://www.google.com/maps"]:focus {
 
   .simply-countdown-one .simply-amount {
     font-size: 22px !important;
+    line-height: 20px !important;
   }
 
   .simply-countdown-one .simply-word {
     font-size: 10px !important;
+    line-height: 15px !important;
+    
+  }
+}
+.spacer-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .spacer-mobile {
+    display: block;
+    height: 20px;
   }
 }
