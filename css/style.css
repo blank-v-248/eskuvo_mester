@@ -2064,7 +2064,7 @@ p a[href*="https://www.google.com/maps"]:focus {
   color: #ffffff !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   #fh5co-header.fh5co-cover {
     background-image: url("../images/sajat/P1114368_mobile.JPG") !important;
     background-position: center center !important; /* vagy: top center */
