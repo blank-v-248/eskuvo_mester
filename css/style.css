@@ -1853,9 +1853,17 @@ form label {
   position: relative;
 }
 
+#fh5co-footer .credits-title {
+  font-family: 'Sacramento', cursive;
+  font-size: 3rem;
+  color: #0b4f2f;
+  font-weight: 400;
+  display: block;
+}
+
 #fh5co-footer .credits-hover {
   cursor: pointer;
-  color: #51744e;
+  color: #51744e; 
 }
 
 /* Place popup BELOW so no gap exists */
