@@ -2064,4 +2064,29 @@ p a[href*="https://www.google.com/maps"]:focus {
   color: #ffffff !important;
 }
 
+@media screen and (max-width: 768px) {
+  #fh5co-header.fh5co-cover {
+    background-image: url("images/sajat/P1114368_mobile.JPG") !important;
+    background-position: center center !important; /* vagy: top center */
+    background-size: cover !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .simply-countdown-one > .simply-section {
+    width: 70px !important;
+    height: 70px !important;
+  }
 
+  .simply-countdown-one > .simply-section > div {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .simply-countdown-one .simply-amount {
+    font-size: 22px !important;
+  }
+
+  .simply-countdown-one .simply-word {
+    font-size: 10px !important;
+  }
+}
