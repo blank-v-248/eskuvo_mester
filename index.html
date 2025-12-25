@@ -129,7 +129,6 @@
 			</div>
 		</div>
 	</header>
-</section>
 	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/sajat/bg_main.JPG);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -481,7 +480,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 </script>
+<script>
+(function () {
+  function closeOffcanvasIfOpen() {
+    // offcanvas állapot bezárása
+    document.body.classList.remove('offcanvas');
 
+    // hamburger ikon visszaállítása (X -> 3 vonal)
+    var toggles = document.querySelectorAll('.js-fh5co-nav-toggle, .fh5co-nav-toggle');
+    toggles.forEach(function (t) {
+      t.classList.remove('active');
+      t.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+
+    // NE nyúljunk a mobil menü nyitó gombhoz
+    if (a.classList.contains('js-fh5co-nav-toggle')) return;
+
+    var href = a.getAttribute('href');
+    if (!href) return;
+
+    // hagyjuk békén a placeholder linkeket
+    if (href === '#' || href === '#0') return;
+
+    // csak belső anchor linkek
+    if (href.charAt(0) !== '#') return;
+
+    var target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+
+    closeOffcanvasIfOpen();
+    setTimeout(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  });
+})();
+</script>
 </body>
 </html>
 
